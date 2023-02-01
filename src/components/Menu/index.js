@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button';
-import { makeStyles } from '@mui/styles'
+// import { makeStyles } from '@mui/styles'
+import { css } from '@emotion/react'
 import Map from '../Map'
 import Sponsors from '../Sponsors'
 import pkgJson from '../../../package.json'
 import './menu.css'
 
 // drawer is 'out' of #app, css vars dont work, darkmode with material-ui
-const useStyles = makeStyles(theme => ({
+const styles = makeStyles(theme => ({
   darkOrLightMode: ({ isDarkMode }) => {
     const css = isDarkMode ? theme.themeDark : theme.themeLight
+    console.log('css:', css)
     return {
       '& .MuiPaper-root': {
         backgroundColor: css.eventBgColor,
@@ -36,10 +38,38 @@ const useStyles = makeStyles(theme => ({
     }
   },
 }))
+// const useStyles = makeStyles(theme => ({
+//   darkOrLightMode: ({ isDarkMode }) => {
+//     const css = isDarkMode ? theme.themeDark : theme.themeLight
+//     return {
+//       '& .MuiPaper-root': {
+//         backgroundColor: css.eventBgColor,
+//         color: css.eventFontColor,
+//         '& a': {
+//           color: css.linkColor
+//         },
+//         '& span.version': {
+//           color: css.subHeaderColor
+//         },
+//       }
+//     }
+//   },
+//   button: {
+//     width: '50%',
+//     margin: '5px 25%',
+//     background: theme.custom.primary,
+//     '&:hover': {
+//       background: theme.custom.onhover,
+//     },
+//     '& span.MuiButton-label': {
+//       color: 'white'
+//     }
+//   },
+// }))
 
 const Menu = (props) => {
 
-  const classes = useStyles(props)
+  // const classes = useStyles(props)
   const [isNavOpen, setNav] = useState(false)
   const [isMapOpen, setMap] = useState(false)
 
@@ -70,7 +100,7 @@ const Menu = (props) => {
         <Drawer
           open={isNavOpen}
           onClose={() => toggleDrawer(false)}
-          className={classes.darkOrLightMode}
+          // className={classes.darkOrLightMode}
         >
           <div className="menu-content">
             <h3>
