@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import Accordion from '@material-ui/core/Accordion'
-import AccordionDetails from '@material-ui/core/AccordionDetails'
-import AccordionSummary from '@material-ui/core/AccordionSummary'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import { makeStyles } from '@mui/material/styles'
+import Accordion from '@mui/material/Accordion'
+import AccordionDetails from '@mui/material/AccordionDetails'
+import AccordionSummary from '@mui/material/AccordionSummary'
+// import ExpandMoreIcon from '@mui/material'
+// import { ExpandMoreOutlinedIcon as ExpandMoreIcon } from '@mui/icons-material/'
+
+// import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import './event.css'
 
 const DAY_IN_MS = 86400000 // 24 hours

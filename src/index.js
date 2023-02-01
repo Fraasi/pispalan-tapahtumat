@@ -2,12 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import { createMuiTheme } from '@material-ui/core/styles'
-import { ThemeProvider } from '@material-ui/styles'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+// import { ThemeProvider } from '@material-ui/styles'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   custom: {
     primary: '#1d7d74',
     onhover: '#1b7068'

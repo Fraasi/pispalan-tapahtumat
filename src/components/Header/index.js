@@ -1,8 +1,12 @@
 import React from 'react'
-import Switch from '@material-ui/core/Switch'
-import IconButton from '@material-ui/core/IconButton'
-import MoonIcon from '@material-ui/icons/Brightness4Outlined'
-import SunIcon from '@material-ui/icons/Brightness7Outlined'
+import Switch from '@mui/material/Switch'
+import IconButton from '@mui/material/IconButton'
+// moonicon
+import Brightness4OutlinedIcon from '@mui/icons-material/Brightness4Outlined'
+// sunicon
+import Brightness7OutlinedIcon from '@mui/icons-material/Brightness7Outlined'
+// aliasin breaks build system
+// import { Brightness7OutlinedIcon as SunIcon } from '@mui/icons-material/Brightness7OutlinedIcon'
 import Menu from '../Menu'
 import './header.css'
 
@@ -43,7 +47,7 @@ function Header({ onSwitchChange, isSwitchOn, setShowOnlyPispalaVenues, children
           onClick={toggleTheme}
         >
           {
-            isDarkMode ? <SunIcon /> : <MoonIcon />
+            isDarkMode ? <Brightness7OutlinedIcon /> : <Brightness4OutlinedIcon />
           }
         </IconButton>
 

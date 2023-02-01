@@ -1,7 +1,7 @@
 import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import Modal from '@material-ui/core/Modal'
-import Button from '@material-ui/core/Button'
+import Modal from '@mui/material/Modal'
+import Button from '@mui/material/Button'
 import './map.css'
 
 // https://material-ui.com/guides/migration-v3/#modal
