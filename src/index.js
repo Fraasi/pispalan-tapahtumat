@@ -23,7 +23,23 @@ const theme = createTheme({
     eventBgColor: 'rgb(233, 233, 233)',
     subHeaderColor: 'rgba(0, 0, 0, 0.6)',
     linkColor: 'rgb(0, 0, 238)',
-  }
+  },
+  palette: {
+    darkbg: 'pink',
+    background: {
+      // paper: "#222222", // works
+      default: "#222222"
+    }
+    },
+  //   components: {
+  //     MuiPaper: {
+  //       styleOverrides: {
+  //         root: {
+  //           backgroundColor: "grey" //works
+  //         }
+  //       }
+  //     }
+  //   }
 })
 
 function ThemedApp() {

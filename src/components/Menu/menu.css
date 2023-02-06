@@ -66,12 +66,13 @@
   width: 50%;
   margin: 5px 25%;
   background: var(--color-green);
+  color: white;
 }
 
 .button.kartalla:hover {
   background: var(--color-green-hover);
 }
 
-.button.kartalla>span.MuiButton-label {
+/* .button.kartalla>span.MuiButton-label {
   color: white;
-}
+} */
