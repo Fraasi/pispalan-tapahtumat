@@ -1,44 +1,12 @@
 import React, { useState, useEffect } from 'react'
-// import { makeStyles } from '@mui/styles'
-import { css } from '@emotion/react'
 import Accordion from '@mui/material/Accordion'
 import AccordionDetails from '@mui/material/AccordionDetails'
 import AccordionSummary from '@mui/material/AccordionSummary'
-// import ExpandMoreIcon from '@mui/material'
-// import { ExpandMoreOutlinedIcon as ExpandMoreIcon } from '@mui/icons-material/'
-
-// import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import './event.css'
 
-const DAY_IN_MS = 86400000 // 24 hours
 
-const styles = css`
-:root {
-  width: 100%;
-}
-.secondaryHeading {
-  color: rgba(0, 0, 0, 0.6);
-}
-.icon {
-  verticalAlign: bottom;
-  height: 20;
-  width: 20;
-}
-`
-// const useStyles = makeStyles(theme => ({
-//   root: {
-//     width: '100%',
-//   },
-//   secondaryHeading: {
-//     color: 'rgba(0, 0, 0, 0.6)'
-//   },
-//   icon: {
-//     verticalAlign: 'bottom',
-//     height: 20,
-//     width: 20,
-//   },
-// }));
+const DAY_IN_MS = 86400000 // 24 hours
 
 const Event = (props) => {
   const [isOpen, setOpen] = useState(false)
@@ -46,7 +14,6 @@ const Event = (props) => {
     setOpen(() => props.isSwitchOn)
   }, [props.isSwitchOn]
   )
-  // const classes = useStyles()
 
   const onTitleClick = () => setOpen(prev => !prev)
 
@@ -61,9 +28,9 @@ const Event = (props) => {
 
   if (error_msg) {
     return (
-      <Accordion css={styles} expanded={isOpen}>
+      <Accordion expanded={isOpen}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon sx={{color: 'grey'}} />}
           aria-controls="panel1c-content"
           id="panel1c-header"
           onClick={onTitleClick}
@@ -127,10 +94,9 @@ const Event = (props) => {
   })
 
   return (
-    // <Accordion className={classes.root} expanded={isOpen}>
-    <Accordion css={styles} expanded={isOpen}>
+    <Accordion expanded={isOpen}>
       <AccordionSummary
-        expandIcon={<ExpandMoreIcon />}
+        expandIcon={<ExpandMoreIcon sx={{color: 'grey'}} />}
         aria-controls="panel1c-content"
         id="panel1c-header"
         onClick={onTitleClick}
