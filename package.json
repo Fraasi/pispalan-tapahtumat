@@ -6,7 +6,7 @@
   "private": true,
   "homepage": ".",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "export GENERATE_SOURCEMAP=false&& react-scripts start",
     "build": "react-scripts build",
     "postbuild": "rm -rf docs && cp -r build/ docs && rm -rf build",
     "test": "react-scripts test",
