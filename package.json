@@ -2,7 +2,7 @@
   "name": "pispalan-tapahtumat",
   "description": "Pispala events progressive web app",
   "author": "fraasi <fraasi.gh@gmail.com> (https://fraasi.github.io)",
-  "version": "0.13.4",
+  "version": "0.14.0",
   "private": true,
   "homepage": ".",
   "scripts": {
