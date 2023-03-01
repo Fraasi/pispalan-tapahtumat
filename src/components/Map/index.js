@@ -34,29 +34,27 @@ const LMap = React.forwardRef((props, ref) => (
 
 const Map = ({ isMapOpen, setMap }) => {
   const ref = React.createRef()
-  const onModalOpen = () => {
-    if (process.env.NODE_ENV === "production") {
-      window.gtag('event', 'map_opened', {
-        'event_category': 'user',
-        'event_label': 'map',
-      })
-    }
+  // on production & when modal opens
+  if (process.env.NODE_ENV === "production" && isMapOpen === true) {
+    window.gtag('event', 'map_opened', {
+      'event_category': 'user',
+      'event_label': 'map',
+    })
   }
 
-  return (
-    <Modal
-      id="modal-root"
-      className="modal-root"
-      aria-labelledby="simple-modal-title"
-      aria-describedby="simple-modal-description"
-      open={isMapOpen}
-      onRendered={onModalOpen}
-      onClose={() => setMap(false)}
-      onBackdropClick={() => setMap(false)}
-    >
-      <LMap ref={ref} setMap={setMap} />
-    </Modal>
-  )
+return (
+  <Modal
+    id="modal-root"
+    className="modal-root"
+    aria-labelledby="simple-modal-title"
+    aria-describedby="simple-modal-description"
+    open={isMapOpen}
+    onClose={() => setMap(false)}
+    onBackdropClick={() => setMap(false)}
+  >
+    <LMap ref={ref} setMap={setMap} />
+  </Modal>
+)
 }
 
 
