@@ -35,7 +35,7 @@ const LMap = React.forwardRef((props, ref) => (
 const Map = ({ isMapOpen, setMap }) => {
   const ref = React.createRef()
   // on production & when modal opens
-  if (process.env.NODE_ENV === "production" && isMapOpen === true) {
+  if (process.env.NODE_ENV === "production" && isMapOpen === true && window.gtag) {
     window.gtag('event', 'map_opened', {
       'event_category': 'user',
       'event_label': 'map',

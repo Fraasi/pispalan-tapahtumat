@@ -23,7 +23,7 @@ const Menu = ({ isDarkMode }) => {
 
   const toggleDrawer = () => {
     setNav(prev => !prev)
-    if (process.env.NODE_ENV === "production" && !isNavOpen) {
+    if (process.env.NODE_ENV === "production" && !isNavOpen && window.gtag) {
       window.gtag('event', 'menu_opened', {
         'event_category': 'user',
         'event_label': 'menu',

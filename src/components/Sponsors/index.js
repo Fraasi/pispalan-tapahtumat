@@ -16,7 +16,7 @@ const Sponsors = () => {
   const sponsorsToShow = sponsors.filter(sponsor => sponsor.until > Date.now())
 
   const handleAddClick = (sponsorName) => {
-    if (process.env.NODE_ENV === "production") {
+    if (process.env.NODE_ENV === "production" && window.gtag) {
       window.gtag('event', 'add_clicked', {
         'event_category': 'sponsor',
         'event_label': sponsorName,
