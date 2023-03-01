@@ -4,18 +4,15 @@ import Alert from '@mui/material/Alert'
 import Collapse from '@mui/material/Collapse'
 import Header from './components/Header'
 import Event from './components/Event'
+import fetchData from './mongodb'
 // import vuosittaiset from './assets/vuosittaiset-tapahtumat.js'
 import './App.css'
 
-import { Stitch, RemoteMongoClient, AnonymousCredential } from 'mongodb-stitch-browser-sdk'
-
-const client = Stitch.initializeDefaultAppClient('tapahtumat-api-lffsa')
-const db = client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db('tapahtumat')
 
 function App() {
 
   const [events, setEvents] = useState(null)
-  const [ updateDate, setUpdateDate ] = useState(null)
+  const [updateDate, setUpdateDate] = useState(null)
   const [errorMsg, setErrorMsg] = useState(null)
   const [isSwitchOn, setSwitch] = useState(false)
   const [isDarkMode, setDarkMode] = useState(false)
@@ -32,11 +29,9 @@ function App() {
       localStorage.setItem('dark_mode', 'true')
     }
 
-    client.auth.loginWithCredential(new AnonymousCredential())
-      .then(user => {
-        return db.collection('pispala').find({}, { data: 1, _id: 0 }).asArray()
-      }).then(docs => {
-        const { events_data, map_data, data_updated } = docs[0].data
+    fetchData()
+      .then(data => {
+        const { events_data, map_data, data_updated } = data
         // add vuosittaiset tapahtumat & sort + move hietis last
         // events_data.push(vuosittaiset)
         const hietisIndex = events_data.findIndex(el => el.name === 'Hiedanranta')
@@ -87,8 +82,8 @@ function App() {
             variant="filled"
             onClose={() => { setShowOnlyPispalaVenues(true) }}
           >
-            updateDate:{ updateDate }
-        </Alert>
+            updateDate:{updateDate}
+          </Alert>
         </Collapse>
       }
       {
