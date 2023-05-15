@@ -5,6 +5,6 @@ Effort to collect all local happenings under one PWA website to easily & quickly
 Designed to be simple and clear and to be used on mobile.  
 Open the website in your phone browser, open settings and click 'Add to home screen' to use this website similarly to native apps.
 
-[https://pispala.events/](https://pispala.events/)
+[https://fraasi.github.io/pispalan-tapahtumat/](https://fraasi.github.io/pispalan-tapahtumat/)
 
 &copy; Fraasi
