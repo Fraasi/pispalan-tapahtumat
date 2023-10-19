@@ -8,3 +8,5 @@ Open the website in your phone browser, open settings and click 'Add to home scr
 [https://fraasi.github.io/pispalan-tapahtumat/](https://fraasi.github.io/pispalan-tapahtumat/)
 
 &copy; Fraasi
+
+<!-- kommenttia testaukseen -->
