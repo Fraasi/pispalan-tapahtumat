@@ -1,3 +1,10 @@
+- tarkista localstorage
+  - jos siel ei o tietoja tai updateTime  on yli 24h vanha, hae uuet tapahtumat tietokannasta, tallenna localstorageen
+  - muuten käytä localstorage tapahtumia
+
+
+2025-03-19T10:32:44.775+00:00
+
 lighthouse:
 
 Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles
