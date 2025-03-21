@@ -1,12 +1,10 @@
-# React + Vite
+### Pispala happenings
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Effort to collect all local happenings under one PWA website to easily & quickly see what's happening and where.
 
-Currently, two official plugins are available:
+Designed to be simple and clear and to be used on mobile.  
+Open the website in your phone browser, open settings and click 'Add to home screen' to use this website similarly to native apps.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[https://fraasi.github.io/pispalan-tapahtumat/](https://fraasi.github.io/pispalan-tapahtumat/)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+&copy; Fraasi
