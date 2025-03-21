@@ -3,7 +3,7 @@
   "description": "Pispala events progressive web app",
   "author": "fraasi <fraasi.gh@gmail.com> (https://fraasi.github.io)",
   "license": "UNLICENSED",
-  "version": "0.14.2",
+  "version": "0.15.0",
   "private": true,
   "homepage": ".",
   "type": "module",
@@ -24,7 +24,12 @@
     "react-dom": "^19.0.0",
     "react-leaflet": "^5.0.0",
     "realm-web": "^2.0.1",
-    "web-vitals": "^4.2.4"
+    "web-vitals": "^4.2.4",
+    "workbox-background-sync": "^7.3.0",
+    "workbox-broadcast-update": "^7.3.0",
+    "workbox-cacheable-response": "^7.3.0",
+    "workbox-core": "^7.3.0",
+    "workbox-expiration": "^7.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

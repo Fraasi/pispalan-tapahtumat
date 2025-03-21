@@ -1,68 +1,61 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-green: #1d7d74;
+  --color-green-hover: #1b7068;
+  --button-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  --button-border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.theme-dark {
+  --theme-color-bg: rgb(44, 44, 44);
+  --theme-color-font: rgba(233, 233, 233, 1);
+  --theme-color-font-sub-header: rgba(255, 255, 255, 0.6);
+  --theme-color-link: #29aea0;
+  --theme-color-event-before: rgba(255, 255, 255, 0.2);
+  --theme-background-image: url('./assets/nino-pispala-600.jpg');
 }
-a:hover {
-  color: #535bf2;
+
+.theme-light {
+  --theme-color-bg: rgb(233, 233, 233);
+  --theme-color-font: rgb(40, 40, 40);
+  --theme-color-font-sub-header: rgba(0, 0, 0, 0.6);
+  --theme-color-link: rgb(0, 0, 238);
+  --theme-color-event-before: rgba(0, 0, 0, 0.2);
+  --theme-background-image: url('./assets/IMG_4189-600.jpg');
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+  background-color: rgb(135, 130, 120);
+  padding-right: 0px !important;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+body::-webkit-scrollbar:vertical {
+  width: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+}
+
+a, a:visited {
+  color: var(--theme-color-link)
 }

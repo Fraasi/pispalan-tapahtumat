@@ -5,8 +5,6 @@ import IconButton from '@mui/material/IconButton'
 import Brightness4OutlinedIcon from '@mui/icons-material/Brightness4Outlined'
 // sunicon
 import Brightness7OutlinedIcon from '@mui/icons-material/Brightness7Outlined'
-// aliasin breaks build system
-// import { Brightness7OutlinedIcon as SunIcon } from '@mui/icons-material/Brightness7OutlinedIcon'
 import Menu from '../Menu'
 import './header.css'
 
