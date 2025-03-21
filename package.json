@@ -2,28 +2,17 @@
   "name": "pispalan-tapahtumat",
   "description": "Pispala events progressive web app",
   "author": "fraasi <fraasi.gh@gmail.com> (https://fraasi.github.io)",
+  "license": "UNLICENSED",
   "version": "0.14.2",
   "private": true,
   "homepage": ".",
+  "type": "module",
   "scripts": {
-    "start": "export GENERATE_SOURCEMAP=false&& react-scripts start",
-    "build": "react-scripts build",
-    "postbuild": "rm -rf docs && cp -r build/ docs && rm -rf build",
-    "test": "react-scripts test",
-    "version": "npm run build && git add -A docs",
-    "analyze": "source-map-explorer 'docs/static/js/*.js'"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "analyze": "source-map-explorer 'docs/**.js'"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -34,30 +23,19 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-leaflet": "^5.0.0",
-    "react-scripts": "^5.0.1",
     "realm-web": "^2.0.1",
-    "web-vitals": "^4.2.4",
-    "workbox-background-sync": "^7.3.0",
-    "workbox-broadcast-update": "^7.3.0",
-    "workbox-cacheable-response": "^7.3.0",
-    "workbox-core": "^7.3.0",
-    "workbox-expiration": "^7.3.0",
-    "workbox-google-analytics": "^7.3.0",
-    "workbox-navigation-preload": "^7.3.0",
-    "workbox-precaching": "^7.3.0",
-    "workbox-range-requests": "^7.3.0",
-    "workbox-routing": "^7.3.0",
-    "workbox-strategies": "^7.3.0",
-    "workbox-streams": "^7.3.0"
+    "web-vitals": "^4.2.4"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^14.4.3",
-    "source-map-explorer": "^2.5.3"
-  },
-  "eslintIgnore": [
-    "/docs/**"
-  ],
-  "license": "UNLICENSED"
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "source-map-explorer": "^2.5.3",
+    "vite": "^6.2.0"
+  }
 }
