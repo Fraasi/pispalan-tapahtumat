@@ -3,7 +3,7 @@
   "description": "Pispala events progressive web app",
   "author": "fraasi <fraasi.gh@gmail.com> (https://fraasi.github.io)",
   "license": "UNLICENSED",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "homepage": ".",
   "type": "module",
