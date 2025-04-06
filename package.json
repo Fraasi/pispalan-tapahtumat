@@ -12,7 +12,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "analyze": "source-map-explorer 'docs/**.js'"
+    "analyze": "npx source-map-explorer 'docs/**.js'",
+    "generate-pwa-assets": "pwa-assets-generator"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -43,7 +44,7 @@
     "workbox-core": "^7.3.0",
     "workbox-window": "^7.3.0"
   },
-    "overrides": {
+  "overrides": {
     "sharp": "0.32.6",
     "sharp-ico": "0.1.5"
   }
