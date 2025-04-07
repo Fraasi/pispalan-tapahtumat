@@ -14,9 +14,9 @@ const Menu = ({ isDarkMode }) => {
 
   // workaround for drawer bg & font colors
   const theme = useTheme()
-  const currentThemeColors = isDarkMode ? theme.themeDark : theme.themeLight
-  const { eventBgColor, eventFontColor, subHeaderColor } = currentThemeColors
   // console.log('theme:', theme)
+  const currentThemeColors = isDarkMode ? theme.themeDark : theme.themeLight
+  const { eventBgColor = 'rgb(44, 44, 44)', eventFontColor = 'rgb(233, 233, 233)', subHeaderColor = 'rgba(255, 255, 255, 0.6)' } = currentThemeColors
 
   const [isNavOpen, setNav] = useState(false)
   const [isMapOpen, setMap] = useState(false)

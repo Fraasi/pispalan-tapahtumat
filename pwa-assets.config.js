@@ -1,10 +1,10 @@
-// import {
-    // defineConfig,
-    // minimal2023Preset as preset,
-// } from '@vite-pwa/assets-generator/config'
+import {
+    defineConfig,
+    minimal2023Preset,
+} from '@vite-pwa/assets-generator/config'
 
-import { defineConfig } from '@vite-pwa/assets-generator/config'
-import { minimal2023Preset } from '@vite-pwa/assets-generator/dist/presets'
+// import { defineConfig } from '@vite-pwa/assets-generator/config'
+// import { minimal2023Preset } from '@vite-pwa/assets-generator/dist/presets'
 
 let config
 try {
