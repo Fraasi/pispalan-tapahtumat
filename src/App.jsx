@@ -33,6 +33,7 @@ function App() {
 
     function getDbData() {
       fetchData()
+        .then(data => data.json())
         .then(data => {
           sortDataToState(data)
           localStorage.setItem('local_data', JSON.stringify(data))
@@ -56,17 +57,20 @@ function App() {
       localStorage.setItem('dark_mode', 'true')
     }
 
-    // check for localStorage & data_updated + 1 day less than now
+    // check for localStorage & data_updated + 1 day less than now,
+    // not best solution if need to update db from cli when testing
+    // better?: use localstorage for better UX, fetch new data in the background
     const local_data = JSON.parse(localStorage.getItem('local_data')) // JSON.parse(null) returns also null
     if ( !local_data ) {
       getDbData() // no localstorage, get new data
     } else {
-      const local_data_updated = new Date(local_data.data_updated)
-      if (local_data_updated.setDate(local_data_updated.getDate() + 1) < new Date()) {
-        getDbData() // local storage out of date, fetch new data
-      } else {
-        sortDataToState(local_data) // use data from localstorage
-      }
+      // const local_data_updated = new Date(local_data.data_updated)
+      // if (local_data_updated.setDate(local_data_updated.getDate() + 1) < new Date()) {
+      // } else {
+      sortDataToState(local_data) // use data from localstorage to prevent waitingfetch
+      getDbData() // local storage out of date, fetch new data
+        // fetch new data in background?
+      // }
     }
   }, [])
 

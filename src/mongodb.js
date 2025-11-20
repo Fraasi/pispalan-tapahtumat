@@ -1,20 +1,11 @@
-import * as Realm from "realm-web";
-
-const app = new Realm.App({ id: 'tapahtumat-api-lffsa' });
-const credentials = Realm.Credentials.anonymous();
-
 
 const fetchData = async () => {
 
   try {
-    await app.logIn(credentials);
-    const dbData = await app.currentUser
-    .mongoClient('mongodb-atlas')
-    .db('tapahtumat')
-    .collection('pispala')
-    .find({})
-    .catch(console.error)
-    return dbData[0].data
+    const events = await fetch('https://fraasi--a47de3e6be1711f08f5342dde27851f2.web.val.run')
+      .then(d => d)
+      .catch(console.error)
+    return events
   } catch (error) {
     if (error) console.log('error:', error)
   }
